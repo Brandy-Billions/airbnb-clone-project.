@@ -156,6 +156,38 @@ Authentication, authorization, and input validation are implemented to protect u
 ###  CI/CD Integration
 Automated workflows using GitHub Actions and Docker streamline the testing and deployment process. This ensures new features and updates are delivered quickly and reliably without disrupting the application.
 
+##  API Security
+
+Securing the backend APIs of the Airbnb Clone Project is critical to protecting sensitive user data, financial transactions, and overall application integrity. Below are the key security measures that will be implemented:
+
+###  Authentication
+Authentication ensures that only registered users can access protected parts of the system. Using secure methods like token-based authentication (e.g., JWT), the system verifies the identity of users before granting access to personal data or restricted features.
+
+ **Why it's important**: Protects user accounts, prevents unauthorized access, and secures personal information such as emails and payment history.
+
+###  Authorization
+Authorization controls what actions a user is allowed to perform after authentication. For instance, a guest should not be able to edit another host’s property listing.
+
+ **Why it's important**: Prevents privilege escalation, protects business logic, and ensures users can only access or modify data they are permitted to.
+
+###  Rate Limiting
+Rate limiting restricts how many requests a user or IP can make to the API within a certain time frame. This is especially useful for preventing abuse and brute-force attacks.
+
+ **Why it's important**: Helps protect against Denial-of-Service (DoS) attacks and ensures API availability for all users.
+
+###  Input Validation & Sanitization
+Validating and sanitizing user input helps prevent common attacks such as SQL Injection and Cross-Site Scripting (XSS).
+
+ **Why it's important**: Ensures data integrity, protects the database, and defends against code injection attacks.
+
+###  HTTPS & Data Encryption
+All API communication will be conducted over HTTPS to ensure data is encrypted during transmission. Sensitive information such as login credentials and payment data must be securely encrypted at all times.
+
+ **Why it's important**: Prevents eavesdropping, man-in-the-middle attacks, and data theft during transmission.
+
+---
+
+By implementing these security measures, the Airbnb Clone Project ensures a safe and trustworthy experience for all users, hosts, and administrators.
 
 
 ---
