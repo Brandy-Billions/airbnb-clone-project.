@@ -17,6 +17,17 @@ The **Airbnb Clone Project** is a comprehensive full-stack web application that 
 - **API**: REST & GraphQL
 - **CI/CD**: GitHub Actions, Docker
 - **Version Control**: Git, GitHub
+- 
+## Team Roles
+
+### 1. Backend Developer
+Handles server-side development and API creation using Django.
+
+### 2. Database Administrator
+Designs and manages the MySQL database and ensures data integrity.
+
+### 3. DevOps Engineer
+Sets up CI/CD pipelines using GitHub Actions and Docker for automated deployment.
 
 ## Key Features
 - User registration and authentication
@@ -29,7 +40,8 @@ The **Airbnb Clone Project** is a comprehensive full-stack web application that 
 ---
 
 ## Repository Structure (Planned)
-git add README.md
-git commit -m "Add Team Roles section to README"
-git push origin main
+
+
+
+
 
