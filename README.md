@@ -29,3 +29,7 @@ The **Airbnb Clone Project** is a comprehensive full-stack web application that 
 ---
 
 ## Repository Structure (Planned)
+git add README.md
+git commit -m "Add Team Roles section to README"
+git push origin main
+
