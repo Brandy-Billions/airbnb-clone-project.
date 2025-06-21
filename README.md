@@ -62,6 +62,74 @@ A CI/CD platform that automates testing and deployment workflows. Used to trigge
 ###  Markdown
 A lightweight markup language used to write project documentation files like `README.md`. It helps present information clearly and professionally on GitHub.
 
+## 🗃️ Database Design
+
+The Airbnb Clone Project uses a relational database to store and manage data. Below are the main entities (tables), their key fields, and how they relate to one another.
+
+###  1. Users
+Represents people who use the platform to either host or book properties.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `name`
+- `email`
+- `password_hash`
+- `is_host` (Boolean to determine if the user is a host)
+
+###  2. Properties
+Represents properties listed by hosts.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `title`
+- `description`
+- `location`
+- `price_per_night`
+
+###  3. Bookings
+Represents reservations made by users for a property.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `check_in_date`
+- `check_out_date`
+- `total_price`
+
+###  4. Reviews
+Represents feedback given by users after staying at a property.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `rating` (1–5 stars)
+- `comment`
+
+###  5. Payments
+Represents payment transactions for bookings.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `booking_id` (Foreign Key → Bookings)
+- `payment_method`
+- `payment_status`
+- `amount`
+
+---
+
+###  Entity Relationships
+
+- **A user** can list multiple **properties** (`1-to-many`).
+- **A property** can receive multiple **bookings** (`1-to-many`).
+- **A user** can make multiple **bookings** (`1-to-many`).
+- **Each booking** belongs to one **user** and one **property** (`many-to-1`).
+- **A property** can have multiple **reviews** from different **users** (`1-to-many`).
+- **Each booking** has one **payment** record (`1-to-1`).
+
+This relational model ensures structured data storage and efficient querying for a scalable backend system.
 
 ---
 
